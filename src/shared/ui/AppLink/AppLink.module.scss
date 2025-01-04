@@ -1,0 +1,13 @@
+.app-link {
+  &.primary {
+    color: var(--primary-color);
+  }
+
+  &.secondary {
+    color: var(--inverted-secondary-color);
+  }
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+}

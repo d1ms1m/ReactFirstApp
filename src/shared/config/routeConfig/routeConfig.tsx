@@ -2,12 +2,12 @@ import {RouteProps} from "react-router-dom";
 import {HomePage} from "pages/HomePage";
 import {AboutPage} from "pages/AboutPage";
 
-enum AppRoute {
+export enum AppRoute {
     HOME = "home",
     ABOUT = "about",
 }
 
-const RoutePath: Record<AppRoute, string> = {
+export const RoutePath: Record<AppRoute, string> = {
     [AppRoute.HOME]: "/",
     [AppRoute.ABOUT]: "/about",
 }
