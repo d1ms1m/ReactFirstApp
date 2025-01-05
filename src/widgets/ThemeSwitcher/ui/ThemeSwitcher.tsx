@@ -1,6 +1,5 @@
 import {classNames} from "shared/lib/ClassNames/classNames";
 import style from "./ThemeSwitcher.module.scss";
-import React from "react";
 import {Theme, useTheme} from "app/providers/ThemeProvider";
 import DarkIcon from "shared/assets/icons/theme-dark.svg"
 import LightIcon from "shared/assets/icons/theme-light.svg"

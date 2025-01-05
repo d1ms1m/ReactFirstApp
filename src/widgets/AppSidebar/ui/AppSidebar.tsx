@@ -1,6 +1,6 @@
 import {classNames} from "shared/lib/ClassNames/classNames";
 import style from "./AppSidebar.module.scss";
-import React, {FC, useState} from "react";
+import {FC, useState} from "react";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {LangSwitcher} from "widgets/LangSwitcher/ui/LangSwitcher";
 

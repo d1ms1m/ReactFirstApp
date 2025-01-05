@@ -1,4 +1,3 @@
-import React from 'react';
 import {classNames} from "shared/lib/ClassNames/classNames";
 import style from "./AppNavbar.module.scss";
 import {AppRoute, RoutePath} from "shared/config/routeConfig/routeConfig";
