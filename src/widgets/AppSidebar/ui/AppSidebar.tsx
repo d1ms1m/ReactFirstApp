@@ -2,6 +2,7 @@ import {classNames} from "shared/lib/ClassNames/classNames";
 import style from "./AppSidebar.module.scss";
 import React, {FC, useState} from "react";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import {LangSwitcher} from "widgets/LangSwitcher/ui/LangSwitcher";
 
 interface AppSidebarProps {
     className?: string
@@ -22,6 +23,7 @@ export const AppSidebar: FC<AppSidebarProps> = (props) => {
             <button onClick={onToggle}>toggle</button>
             <div className={style.switchers}>
                 <ThemeSwitcher/>
+                <LangSwitcher/>
             </div>
         </nav>
     );

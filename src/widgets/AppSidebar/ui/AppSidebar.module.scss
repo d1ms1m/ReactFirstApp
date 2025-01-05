@@ -11,8 +11,11 @@
   }
 
   .switchers {
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: var(--base-padding);
+    gap: var(--base-padding);
   }
 }
 

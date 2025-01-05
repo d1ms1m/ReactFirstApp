@@ -4,6 +4,7 @@ import {ButtonHTMLAttributes, FC} from "react";
 
 export enum ButtonStyle {
     CLEAR = "clear",
+    DEFAULT = "default",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
