@@ -10,4 +10,15 @@
   color: var(--primary-color);
 
   min-height: 100vh;
+
+  .content-container {
+    display: flex;
+    height: 100%;
+
+    .page-wrapper {
+      flex-grow: 1;
+      padding: var(--base-padding);
+      height: 100%;
+    }
+  }
 }

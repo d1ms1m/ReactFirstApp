@@ -1,0 +1,18 @@
+.app-sidebar {
+  position: relative;
+  padding: var(--base-padding);
+  height: calc(100vh - var(--app-navbar-height));
+  width: var(--sidebar-width);
+  background: var(--inverted-bg-color);
+  transition: width .3s;
+
+  &.collapsed {
+    width: var(--sidebar-collapsed-width);
+  }
+
+  .switchers {
+    position: absolute;
+    bottom: var(--base-padding);
+  }
+}
+

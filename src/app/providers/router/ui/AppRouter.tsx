@@ -5,15 +5,17 @@ import {RouteConfig} from "shared/config/routeConfig/routeConfig";
 const AppRouter = () => {
     return (
         <Suspense fallback={<div className={"global-loader"}>Loading...</div>}>
-            <Routes>
-                {Object.values(RouteConfig).map(({element, path}: RouteProps) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        element={element}
-                    />
-                ))}
-            </Routes>
+            <div className={"page-wrapper"}>
+                <Routes>
+                    {Object.values(RouteConfig).map(({element, path}: RouteProps) => (
+                        <Route
+                            key={path}
+                            path={path}
+                            element={element}
+                        />
+                    ))}
+                </Routes>
+            </div>
         </Suspense>
     );
 };
