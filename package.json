@@ -10,7 +10,8 @@
     "lint:ts": "eslint \"**/*.{ts,tsx,js,mjs}\" --ignore-pattern \"dist/**/*\"",
     "lint:ts--fix": "eslint \"**/*.{ts,tsx,js,mjs}\" --ignore-pattern \"dist/**/*\" --fix",
     "lint:scss": "npx stylelint \"**/*.css\"",
-    "lint:scss--fix": "npx stylelint \"**/*.css\" --fix"
+    "lint:scss--fix": "npx stylelint \"**/*.css\" --fix",
+    "test": "jest --config ./config/jest/jest.config.ts"
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",

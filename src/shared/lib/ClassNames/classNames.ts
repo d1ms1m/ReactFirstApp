@@ -8,7 +8,7 @@ export function classNames(className: string, mods: Mods = {}, additional: Array
     const result = [
         className,
         ...filteredMods,
-        ...additional.filter(Boolean)
+        ...additional.filter(Boolean),
     ].join(' ')
 
     return result.trim()
