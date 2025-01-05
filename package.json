@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "lint:ts": "eslint \"**/*.{ts,tsx,js,mjs}\" --ignore-pattern \"dist/**/*\"",
+    "lint:ts--fix": "eslint \"**/*.{ts,tsx,js,mjs}\" --ignore-pattern \"dist/**/*\" --fix"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",

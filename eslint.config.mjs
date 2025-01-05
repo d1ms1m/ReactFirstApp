@@ -8,14 +8,6 @@ export default [
     {
         files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
         ignores: ["dist/**/*"],
-        plugins: {
-            pluginReact,
-        },
-        settings: {
-            react: {
-                version: "detect",
-            },
-        },
     },
     {
         languageOptions: {
@@ -29,11 +21,19 @@ export default [
     },
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
-    pluginReact.configs.flat.recommended,
+    {
+        ...pluginReact.configs.flat.recommended,
+        settings: {
+            react: {
+                version: "detect",
+            },
+        },
+
+    },
     pluginReact.configs.flat['jsx-runtime'],
     {
         rules: {
-            //rules here
+            "@typescript-eslint/no-unused-vars": "warn",
         }
     }
 ];
