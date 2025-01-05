@@ -4,7 +4,7 @@ import {BuildOptions} from "../build.interfaces";
 
 export function buildLoaders(opts: BuildOptions): webpack.RuleSetRule[] {
     const styleLoader = {
-        test: /\.s[ac]ss$/i,
+        test: /\.s[ac]ss|css$/i,
         use: [
             opts.isDev ? "style-loader" : MiniCssExtractPlugin.loader, // Creates `style` nodes from JS strings
             {
@@ -39,17 +39,21 @@ export function buildLoaders(opts: BuildOptions): webpack.RuleSetRule[] {
         issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
     }
-    const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-            {
-                loader: 'file-loader',
-            },
-        ],
+    const fontLoader = {
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
+        type: 'asset',
+        parser: {
+            dataUrlCondition: {
+                maxSize: 8 * 1024 // 8kb
+            }
+        },
+        generator: {
+            filename: 'fonts/[hash][ext][query]'
+        }
     }
     return [
         svgLoader,
-        fileLoader,
+        fontLoader,
         tsLoader,
         styleLoader,
     ]

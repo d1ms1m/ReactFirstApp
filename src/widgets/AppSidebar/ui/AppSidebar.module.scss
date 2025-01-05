@@ -4,7 +4,7 @@
   height: calc(100vh - var(--app-navbar-height));
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
-  transition: width .3s;
+  transition: width 0.3s;
 
   &.collapsed {
     width: var(--sidebar-collapsed-width);
@@ -18,4 +18,3 @@
     gap: var(--base-padding);
   }
 }
-
