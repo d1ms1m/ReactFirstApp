@@ -2,7 +2,6 @@ import {classNames} from "shared/lib/ClassNames/classNames";
 import style from "./ThrowErrorButton.module.scss";
 import {mdiAlertCircle} from "@mdi/js";
 import Icon from "@mdi/react";
-import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
 
 interface ThrowErrorButtonProps {

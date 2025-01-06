@@ -1,4 +1,4 @@
-import {Suspense, useEffect} from 'react';
+import {Suspense} from 'react';
 import 'app/styles/index.scss'
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "shared/lib/ClassNames/classNames";
