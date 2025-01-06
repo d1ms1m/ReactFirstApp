@@ -2,5 +2,7 @@
   "Language": "En",
   "LoadingTranslation": "Loading translation",
   "Loading": "Loading",
-  "PageNotFound": "Page Not Found"
+  "PageNotFound": "Page Not Found",
+  "RuntimeError": "Unexpected error!",
+  "ReloadPage": "Reload page"
 }

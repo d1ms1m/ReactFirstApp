@@ -2,5 +2,7 @@
   "Language": "Ru",
   "LoadingTranslation": "Загрузка перевода",
   "Loading": "Загрузка",
-  "PageNotFound": "Страница не найдена"
+  "PageNotFound": "Страница не найдена",
+  "RuntimeError": "Неожиданная ошибка!",
+  "ReloadPage": "Перезагрузить страницу"
 }
