@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from "path";
+
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -65,9 +67,13 @@ export default {
     // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
 
+    modulePaths: [
+        "<rootDir>src"
+    ],
+
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: [
-        "node_modules"
+        "node_modules",
     ],
 
     // An array of file extensions your modules use
@@ -81,7 +87,10 @@ export default {
     ],
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-    // moduleNameMapper: {},
+    moduleNameMapper: {
+        "\\.s?css$": "identity-obj-proxy",
+        "\\.svg$": path.resolve(__dirname, "./jestEmptyComponent.tsx"),
+    },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
     // modulePathIgnorePatterns: [],
@@ -128,7 +137,9 @@ export default {
     // setupFiles: [],
 
     // A list of paths to modules that run some code to configure or set up the testing framework before each test
-    // setupFilesAfterEnv: [],
+    setupFilesAfterEnv: [
+        "<rootDir>config/jest/setupTests.ts"
+    ],
 
     // The number of seconds after which a test is considered as slow and reported as such in the results.
     // slowTestThreshold: 5,
@@ -177,10 +188,10 @@ export default {
     //     ".@(spec|test).(ts|tsx)$": "ts-jest"
     // },
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-    // transformIgnorePatterns: [
-    //   "\\\\node_modules\\\\",
-    //   "\\.pnp\\.[^\\\\]+$"
-    // ],
+    transformIgnorePatterns: [
+        "\\\\node_modules\\\\",
+        // "\\.pnp\\.[^\\\\]+$"
+    ],
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,
