@@ -4,5 +4,7 @@
   "Loading": "Loading",
   "PageNotFound": "Page Not Found",
   "RuntimeError": "Unexpected error!",
-  "ReloadPage": "Reload page"
+  "ReloadPage": "Reload page",
+  "Home": "Home",
+  "About": "About us"
 }
