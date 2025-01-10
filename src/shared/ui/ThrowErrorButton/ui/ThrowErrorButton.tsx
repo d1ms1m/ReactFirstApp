@@ -27,6 +27,7 @@ export const ThrowErrorButton = ({className}: ThrowErrorButtonProps) => {
             className={classNames(style['throw-error-button'], {}, [className])}
             onClick={onClick}
         >
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <Icon path={mdiAlertCircle} size={'24px'}/>
             Get Error!
         </button>
