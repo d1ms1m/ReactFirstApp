@@ -3,8 +3,9 @@ import style from "./ThrowErrorButton.module.scss";
 import {mdiAlertCircle} from "@mdi/js";
 import Icon from "@mdi/react";
 import {useEffect, useState} from "react";
+import {Button, ButtonProps, ButtonStyle} from "shared/ui/Button/Button";
 
-interface ThrowErrorButtonProps {
+interface ThrowErrorButtonProps extends ButtonProps {
     className?: string
 }
 
@@ -23,13 +24,14 @@ export const ThrowErrorButton = ({className}: ThrowErrorButtonProps) => {
     }, [error])
 
     return (
-        <button
+        <Button
             className={classNames(style['throw-error-button'], {}, [className])}
+            buttonStyle={ButtonStyle.ROUNDED}
             onClick={onClick}
         >
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <Icon path={mdiAlertCircle} size={'24px'}/>
             Get Error!
-        </button>
+        </Button>
     );
 };

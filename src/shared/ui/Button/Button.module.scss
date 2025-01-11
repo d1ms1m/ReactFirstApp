@@ -1,5 +1,7 @@
 .button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   &.clear {
     border: none;
@@ -8,7 +10,11 @@
   }
 
   &.default {
-    display: flex;
-    align-items: center;
+  }
+
+  &.rounded {
+    padding: 0 5px;
+    border-width: 1px;
+    border-radius: var(--base-border-radius);
   }
 }

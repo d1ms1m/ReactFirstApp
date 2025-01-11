@@ -5,9 +5,10 @@ import {ButtonHTMLAttributes, FC} from "react";
 export enum ButtonStyle {
     CLEAR = "clear",
     DEFAULT = "default",
+    ROUNDED = "rounded",
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     buttonStyle?: ButtonStyle,
 }

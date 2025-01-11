@@ -2,17 +2,18 @@
 @use "variables/global";
 @use "themes/light";
 @use "themes/dark";
+@use "../../shared/assets/fonts.css";
 
 body iframe#react-refresh-overlay {
   display: none !important;
 }
 
-#root {
+body {
   font: var(--font-m);
+  min-height: 100vh;
 }
 
 .app {
-  min-height: 100vh;
   background: var(--bg-color);
   color: var(--primary-color);
 
